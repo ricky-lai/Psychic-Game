@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>The Psychic Game</h1>
+    
+    <p>Guess what letter I'm thinking of</p>
+    
+    <p>Wins</p>
+
+    <p>Losses</p>
+
+    <p>Guesses Left</p>
+    
+    <p>Your guesses so far</p>
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    // This is where my java script will go
+    // When the app starts a random letter is chosen
+        // Create an array called Letters
+     var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];   
+        // Generate random number 
+     var randomNumber = Math.floor(Math.random() * 26);
+        // Use that number to select an index from the array
+     var computerChoice = letters[randomNumber];
+     console.log(computerChoice); // This is a sanity check
+    
+    // When hits a key, we capture the keystroke (letter)
+    var userChoice;
+    document.onkeyup = function(event) {
+        console.log("The key that was pressed", event.key);
+        userChoice = event.key
+    }
+        
+    // If users pick matches the computers game
+    
+        // Wins counter increments by 1
+        // New win shows on page
+        // Game resets
+    // Else "if users pick doesn't match" 
+        // The user's choice shows up on the screen
+        // Guess counter decrements by 1
+        // New guess counter shows on screen
+        // If guess counter is 0 or < 1 
+            // User Loses
+            // Loss counter increments by 1
+            // Game resets
+        // Else 
+            // User picks again
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
