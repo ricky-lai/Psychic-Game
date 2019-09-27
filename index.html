@@ -1,68 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<title>Psychic Game(Basic)</title>
+	
+	<!-- Bootstrap Core CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
-    <h1>The Psychic Game</h1>
-    
-    <p>Guess what letter I'm thinking of</p>
-    
-    <p>Wins</p>
-
-    <p>Losses</p>
-
-    <p>Guesses Left</p>
-    
-    <p>Your guesses so far</p>
-    
-    
-    
-    
-    
-    
-    
-    <script>
-    // This is where my java script will go
-    // When the app starts a random letter is chosen
-        // Create an array called Letters
-     var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];   
-        // Generate random number 
-     var randomNumber = Math.floor(Math.random() * 26);
-        // Use that number to select an index from the array
-     var computerChoice = letters[randomNumber];
-     console.log(computerChoice); // This is a sanity check
-    
-    // When hits a key, we capture the keystroke (letter)
-    var userChoice;
-    document.onkeyup = function(event) {
-        console.log("The key that was pressed", event.key);
-        userChoice = event.key
-    }
-        
-    // If users pick matches the computers game
-    
-        // Wins counter increments by 1
-        // New win shows on page
-        // Game resets
-    // Else "if users pick doesn't match" 
-        // The user's choice shows up on the screen
-        // Guess counter decrements by 1
-        // New guess counter shows on screen
-        // If guess counter is 0 or < 1 
-            // User Loses
-            // Loss counter increments by 1
-            // Game resets
-        // Else 
-            // User picks again
-    
-    
-    
-    
-    
-    
-    </script>
+<header>
+	<div class="page-header">
+	  <h1>The Psychic Game </h1>
+	</div>
+</header>
+<div class="container">
+	<h2>Guess what letter I'm thinking of</h2>
+	<div class="row">
+		<div class="col-md-4">
+			<img src="assets/images/psychic.jpg" class="thumbnail" alt="...">
+		</div>
+		<div class="col-md-4">
+			<ul id="space" class="list-group">
+				<li class="list-group-item" id="wins">Wins:</li>
+				<li class="list-group-item" id="lose">Losses:</li>
+				<li class="list-group-item" id="guessesLeft">Guesses Left:</li>
+				<li class="list-group-item" id="letter">Your Guesses so far:</li>
+			</ul>
+		</div>
+		
+</div>
+<div>
+    <div class="footer">
+        2019 Ricky Lai
+    </div>
+</div>
+<!-- Javascript game.js -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
